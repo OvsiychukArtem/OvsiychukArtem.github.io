@@ -1,0 +1,68 @@
+/*bibika ------------------ Viiiiiiiiii.....*/
+.bibika {
+	width: 540px; height: 40px;
+	position: absolute;
+	margin-top: 15px;
+	z-index: 2;
+	-webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 20s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0%   {left:-520px; top:0px;}
+    100% {left: 2500px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+	0%   {left:-520px; top:0px;}
+    100% {left: 2500px; top:0px;}	
+}
+
+
+.circle-wrapper div { /* поворачивать будем общий контейнер */
+	
+	position: absolute;
+
+	-webkit-transition: -webkit-transform 1s;
+	-moz-transition: -moz-transform 1s;
+	-ms-transition: -moz-transform 1s;
+	-o-transition: -o-transform 1s;
+	transition: transform 1s; /* трансформации будут происходить анимированно продолжительностью 0.5 сек */
+	
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;	/* указываем, что дочерние элементы находятся в 3D пространстве */
+}
+.circle-wrapper div:hover {	/* добавляя этот класс, поворачиваем контейнер на 180 градусов */
+	-webkit-transform: rotateY( 180deg );
+	-moz-transform: rotateY( 180deg );
+	-ms-transform: rotateY( 180deg );
+	-o-transform: rotateY( 180deg );
+	transform: rotateY( 180deg );
+
+}
+.slider_stage .catalog-main .wrapper div a {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;	/* если элемент "отвернулся" от пользователя, контент этого элемента не виден */
+}
+.front {
+
+	-webkit-transform: rotateY( 180deg );
+	-moz-transform: rotateY( 180deg );
+	-ms-transform: rotateY(180deg);
+	-o-transform: rotateY( 180deg );
+	transform: rotateY( 180deg );	/* в начальном положении фэйс карты к нам развернут на 180 градусов */
+}
+
+
+
